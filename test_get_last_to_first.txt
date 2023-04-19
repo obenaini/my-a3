@@ -1,0 +1,11 @@
+>>> from club_functions import get_last_to_first
+>>> get_last_to_first({}) == {}      # Empty case
+True
+>>> get_last_to_first({'Clare Dunphy': ['Phil Dunphy']}) == {'Dunphy': ['Clare', 'Phil']}  # One person, one friend, same last name
+True
+>>> get_last_to_first({'Jesse Katsopolis': ['Danny R Tanner']}) == {'Katsopolis': ['Jesse'], 'Tanner': ['Danny R']} # One person, one friend, different last name
+True
+>>> get_last_to_first({'Stephanie J Tanner': ['Michelle Tanner', 'Kimmy Gibbler']}) == {'Tanner': ['Michelle', 'Stephanie J'], 'Gibbler': ['Kimmy']} # One person, multiple friends, one with same last name
+True
+>>> get_last_to_first({'Jesse Katsopolis': ['Danny R Tanner', 'Joey Gladstone'], 'Rebecca Donaldson-Katsopolis': ['Kimmy Gibbler', 'Stephanie J Tanner']}) == {'Katsopolis': ['Jesse'], 'Donaldson-Katsopolis': ['Rebecca'], 'Tanner': ['Danny R', 'Stephanie J'], 'Gladstone': ['Joey'], 'Gibbler': ['Kimmy']} # Multiple people, each have muliple friends, one with the same last name
+True

@@ -1,0 +1,12 @@
+>>> from club_functions import get_average_club_count
+>>> get_average_club_count({})     # Empty
+0.0
+
+>>> get_average_club_count({'Claire Dunphy': ['Parent Teacher Association']})     # One person, one club
+1.0
+>>> get_average_club_count({"Ossama Benaini": ["Chess club", "Soccer club", "Drama Club"]}) #One person, multiple clubs
+3.0
+>>> get_average_club_count({"Ossama": ["Chess club"], "Mariam": ["Drama club"]}) # Two person, one club each
+1.0
+>>> get_average_club_count({"Ossama Benaini": ["Chess club", "Soccer club", "Drama Club"], "Mariam El Ghargomi": ["Drama club", "Parent Teacher Association"]}) # Two people, multiple clubs each
+2.5
